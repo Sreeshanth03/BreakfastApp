@@ -133,7 +133,7 @@ const Cart = () => {
                 }
               />
             </Form.Group>
-            <Form.Group className="mb-3">
+            {/* <Form.Group className="mb-3">
               <Form.Label>Phone Number</Form.Label>
               <Form.Control
                 type="tel"
@@ -143,7 +143,21 @@ const Cart = () => {
                   setOrderDetails({ ...orderDetails, phone: e.target.value })
                 }
               />
-            </Form.Group>
+            </Form.Group> */}
+            <Form.Group className="mb-3">
+  <Form.Label>Phone Number</Form.Label>
+  <Form.Control
+    type="tel"
+    required
+    value={orderDetails.phone}
+    onChange={(e) =>
+      setOrderDetails({ ...orderDetails, phone: e.target.value })
+    }
+    pattern="[0-9]*"
+    inputMode="numeric"
+    placeholder="Enter phone number"
+  />
+</Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Token</Form.Label>
               <Form.Control type="text" value={orderDetails.token} readOnly />
