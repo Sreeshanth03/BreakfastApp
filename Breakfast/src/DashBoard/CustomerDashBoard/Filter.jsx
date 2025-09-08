@@ -13,7 +13,7 @@ const Filter = ({ ee }) => {
 
   const filterOptions = [
     "Continental", "English", "Indian", "American", 
-    "Japanese", "Mediterranean", "French", "Healthy"
+    "Japanese", 
   ];
 
   return (
