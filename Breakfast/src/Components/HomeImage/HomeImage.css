@@ -1,0 +1,191 @@
+/* ================= ORANGE COLOR SCHEME ================= */
+:root {
+  --orange-primary: #FF8C00;
+  --orange-dark: #E67E22;
+  --orange-light: #FFA500;
+  --text-light: #FFFFFF;
+  --text-dark: #333333;
+}
+
+/* ================= HOMEPAGE BACKGROUND ================= */
+.Homepage {
+  background-image: url("./multfilmy-om_i_zherri_tom_and_jerry-20423.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Dark overlay for contrast */
+.Homepage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Keep content above overlay */
+.navbar,
+.title-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= BUTTONS ================= */
+.nav-button-orange-filled {
+  background-color: var(--orange-primary);
+  color: var(--text-light);
+  border: 2px solid var(--orange-primary);
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin: 0 8px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button-orange-filled:hover {
+  background-color: var(--orange-dark);
+  border-color: var(--orange-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(230, 126, 34, 0.4);
+}
+
+.nav-button-orange-filled:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: center; /* centered across devices */
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* allows wrapping if space is tight */
+  justify-content: center;
+}
+
+/* ================= TITLE & TAGLINE ================= */
+.title-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.breakfast-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  white-space: nowrap; /* prevent breaking into parts */
+}
+
+.tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* ================= RESPONSIVENESS ================= */
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .breakfast-title {
+    font-size: 2.2rem;
+    white-space: nowrap;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .navbar {
+    padding: 15px;
+  }
+
+  .navbar-buttons {
+    gap: 10px;
+  }
+
+  .nav-button-orange-filled {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Tablet (769px–1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .breakfast-title {
+    font-size: 3rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+    max-width: 80%;
+  }
+
+  .nav-button-orange-filled {
+    padding: 9px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Laptop (1025px–1366px) */
+@media (max-width: 1366px) and (min-width: 1025px) {
+  .breakfast-title {
+    font-size: 3.8rem;
+  }
+
+  .tagline {
+    font-size: 1.3rem;
+  }
+
+  .nav-button-orange-filled {
+    padding: 9px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Large Screens (>1366px) */
+@media (min-width: 1367px) {
+  .breakfast-title {
+    font-size: 5rem;
+  }
+
+  .tagline {
+    font-size: 1.6rem;
+  }
+}
+
+/* ================= FONT IMPORTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;500;600&display=swap');

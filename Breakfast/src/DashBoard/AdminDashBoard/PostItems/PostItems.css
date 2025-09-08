@@ -1,0 +1,105 @@
+/* Container */
+.post-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+  background: linear-gradient(to bottom right, #fbcfe8, #ffffff, #bfdbfe);
+}
+
+/* Card */
+.post-card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.post-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #1f2937;
+}
+
+/* Form */
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label */
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* Input */
+.form-input {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #ec4899;
+  box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.3);
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, #ec4899, #ef4444);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #ef4444, #ec4899);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
+}
+
+/* 📱 Responsive for phones */
+@media (max-width: 600px) {
+  .post-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .post-title {
+    font-size: 20px;
+  }
+
+  .form-input {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
